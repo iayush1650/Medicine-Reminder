@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Medicine Reminder</title>
+  <link rel="stylesheet" href="medicine.css" />
+  <link rel="shortcut icon" href="medicine-logo-design-template_269830-1601.avif" type="image/x-icon">>
+  <script src="medicine app.js" defer></script>
+  <script>
+    if (!localStorage.getItem("isLoggedIn")) {
+      window.location.href = "medicine login.html";
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>💊 Medicine Reminder App</h1>
+    <form id="reminderForm">
+      <input type="text" id="medName" placeholder="Medicine Name" required />
+      <input type="time" id="medTime" required />
+      <button type="submit">Set Reminder</button>
+    </form>
+    <h2>⏰ Active Reminders</h2>
+    <ul id="reminderList"></ul>
+    <button onclick="logout()">🚪 Logout</button>
+  </div>
+</body>
+</html>
